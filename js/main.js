@@ -6,7 +6,7 @@
 /* ---------------------------------------------------------
    1. CONFIGURACIÓN GLOBAL — edita aquí los datos del negocio
    --------------------------------------------------------- */
-const WHATSAPP_NUMBER = "573134418877";
+const WHATSAPP_NUMBER = "573195461334";
 
 const SITE_CONFIG = {
   whatsapp: WHATSAPP_NUMBER,
