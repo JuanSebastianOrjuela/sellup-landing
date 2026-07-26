@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 340 110" role="img" aria-labelledby="sellupLogoTitle">
+  <title id="sellupLogoTitle">$ELL UP — Haz que tu negocio venda más</title>
+  <!-- Wordmark -->
+  <text x="0" y="52" font-family="Manrope, Poppins, sans-serif" font-weight="800" font-size="52" letter-spacing="-1">
+    <tspan fill="#101820">$</tspan><tspan fill="#0B8F36">ELL</tspan><tspan fill="#F7B500" dx="6">UP</tspan>
+  </text>
+  <!-- Ascending arrow integrated after the wordmark -->
+  <g transform="translate(258,6)">
+    <path d="M2 46 L20 26 L32 36 L54 8" fill="none" stroke="#0B8F36" stroke-width="7" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M40 8 L54 8 L54 22" fill="none" stroke="#0B8F36" stroke-width="7" stroke-linecap="round" stroke-linejoin="round"/>
+  </g>
+  <!-- Tagline -->
+  <text x="2" y="80" font-family="Inter, sans-serif" font-weight="500" font-size="15" fill="#4B5563">
+    Haz que tu negocio venda más.
+  </text>
+</svg>
