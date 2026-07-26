@@ -140,14 +140,20 @@ function renderTestimonials(){
    5. SERVICIOS — carrusel automático + expandible
    --------------------------------------------------------- */
 const SERVICES = [
-  { icon: "layout-template", title: "Landing Page para negocios", desc: "Sitios diseñados para atraer, convencer y convertir visitantes en clientes.", pro: false },
-  { icon: "briefcase", title: "Landing Page para profesionales", desc: "Páginas para abogados, contadores, psicólogos, vendedores, médicos, consultores y freelancers.", pro: false },
-  { icon: "linkedin", title: "Mejoramiento de LinkedIn", desc: "Optimizamos tu perfil para que te encuentren, confíen en tu experiencia y te elijan.", pro: false },
-  { icon: "badge-check", title: "Marca personal", desc: "Construimos una imagen profesional que refleje tu valor, experiencia y credibilidad.", pro: false },
-  { icon: "bot", title: "Chatbots para ventas", desc: "Automatizamos conversaciones y ayudamos a atender clientes potenciales en WhatsApp, Instagram o Facebook.", pro: false },
+  { icon: "layout-template", title: "Landing pages para negocios", desc: "Diseño claro, rápido y orientado a convertir visitas en clientes reales.", pro: false },
+  { icon: "briefcase", title: "Landing pages para profesionales", desc: "Páginas para abogados, contadores, psicólogos, médicos, consultores y freelancers.", pro: false },
+  { icon: "linkedin", title: "Mejoramiento de LinkedIn", desc: "Optimizamos tu perfil para que te encuentren, confíen y te elijan.", pro: false },
+  { icon: "badge-check", title: "Marca personal", desc: "Creamos una imagen profesional que refleja tu valor, experiencia y credibilidad.", pro: false },
+  { icon: "bot", title: "Chatbots para ventas", desc: "Automatizamos conversaciones y acompañamos a los clientes en WhatsApp o Instagram.", pro: false },
   { icon: "search-check", title: "Análisis de competencia", desc: "Estudiamos fortalezas, debilidades, posicionamiento y oportunidades del mercado.", pro: true },
   { icon: "tags", title: "Análisis de precios", desc: "Comparamos el mercado para apoyar decisiones de precio más competitivas y rentables.", pro: true },
   { icon: "gauge", title: "Dashboard de mando", desc: "Centralizamos indicadores comerciales para facilitar la toma de decisiones.", pro: true },
+];
+
+const HERO_METRICS = [
+  { value: "+40%", label: "Más oportunidades de contacto" },
+  { value: "7 días", label: "Para lanzar la primera versión" },
+  { value: "100%", label: "Diseño adaptado a tu negocio" },
 ];
 
 const SERVICES_EXTRA = [
@@ -172,9 +178,19 @@ function serviceCardHTML(s){
 function renderServicesCarousel(){
   const track = document.getElementById("servicesTrack");
   if(!track) return;
-  // Duplicamos el set para lograr un loop continuo perfecto.
   const cardsHTML = SERVICES.map(serviceCardHTML).join("");
   track.innerHTML = cardsHTML + cardsHTML;
+}
+
+function renderHeroMetrics(){
+  const host = document.getElementById("heroMetrics");
+  if(!host) return;
+  host.innerHTML = HERO_METRICS.map(metric => `
+    <div class="metric-card">
+      <strong>${metric.value}</strong>
+      <span>${metric.label}</span>
+    </div>
+  `).join("");
 }
 
 function wireServicesExpand(){
@@ -430,6 +446,7 @@ function renderFooter(){
    --------------------------------------------------------- */
 document.addEventListener("DOMContentLoaded", () => {
   try{
+    renderHeroMetrics();
     renderServicesCarousel();
     renderSuccessCases();
     renderTestimonials();
